@@ -5,8 +5,9 @@ import dhbw.fowler2.theatre.Performance;
 public class History extends Play {
 
 
-    public History(String name, String type) {
-        super(name, type);
+    public History(String name) {
+        super(name);
+        super.type = "history";
     }
 
     @Override

@@ -5,8 +5,9 @@ import dhbw.fowler2.theatre.Performance;
 public class Tragedy extends Play {
 
 
-    public Tragedy(String name, String type) {
-        super(name, type);
+    public Tragedy(String name) {
+        super(name);
+        super.type = "tragedy";
     }
 
     @Override
