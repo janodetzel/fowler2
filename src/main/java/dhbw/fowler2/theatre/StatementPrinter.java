@@ -1,5 +1,7 @@
 package dhbw.fowler2.theatre;
 
+import dhbw.fowler2.theatre.Plays.Play;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Map;

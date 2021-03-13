@@ -1,5 +1,7 @@
 package dhbw.fowler2.theatre;
 
+import dhbw.fowler2.theatre.Plays.Play;
+
 public class PerformanceCalculator {
 
     public int calculateAmount(Play play, Performance performance) {
