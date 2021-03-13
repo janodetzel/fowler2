@@ -20,8 +20,7 @@ public class StatementPrinter {
         for (var performance : invoice.performances) {
             // print line for this order
             result += String.format("  %s: %s (%s seats)\n", getPlay(performance).name, getNumberFormat(Locale.US)
-                    .format(performanceCalculator
-                            .calculateAmount(getPlay(performance), performance) / 100), performance.audience);
+                    .format(getPlay(performance).calculateAmount(performance)/ 100), performance.audience);
         }
         result += String.format("Amount owed is %s\n", getNumberFormat(Locale.US).format(getTotalAmount() / 100));
         result += String.format("You earned %s credits\n", getTotalVolumeCredits());
@@ -48,7 +47,7 @@ public class StatementPrinter {
         int result = 0;
 
         for (var performance : invoice.performances) {
-            result += performanceCalculator.calculateAmount(getPlay(performance), performance);
+            result += getPlay(performance).calculateAmount(performance);
         }
 
         return result;

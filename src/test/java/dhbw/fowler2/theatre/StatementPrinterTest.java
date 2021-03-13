@@ -25,6 +25,8 @@ public class StatementPrinterTest {
         StatementPrinter statementPrinter = new StatementPrinter();
         var result = statementPrinter.print(invoice, plays);
 
+        System.out.println("Mismatch result" + result);
+
         Assert.assertEquals("Statement print mismatch", "Statement for BigCo\n" +
                 "  Hamlet: $650.00 (55 seats)\n" +
                 "  As You Like It: $580.00 (35 seats)\n" +

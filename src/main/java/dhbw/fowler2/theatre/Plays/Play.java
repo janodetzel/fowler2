@@ -12,5 +12,5 @@ public abstract class Play {
         this.type = type;
     }
 
-    abstract int calculateAmount(Performance performance);
+    public abstract int calculateAmount(Performance performance);
 }

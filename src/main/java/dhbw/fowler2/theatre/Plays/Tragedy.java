@@ -11,7 +11,7 @@ public class Tragedy extends Play {
     }
 
     @Override
-    int calculateAmount(Performance performance) {
+    public int calculateAmount(Performance performance) {
         if (performance.audience > 30) {
             calculatedAmount += 1000 * (performance.audience - 30);
         };
