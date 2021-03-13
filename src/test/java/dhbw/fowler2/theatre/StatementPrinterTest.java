@@ -1,6 +1,7 @@
 package dhbw.fowler2.theatre;
 
 import dhbw.fowler2.theatre.Plays.Comedy;
+import dhbw.fowler2.theatre.Plays.History;
 import dhbw.fowler2.theatre.Plays.Play;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class StatementPrinterTest {
     public void printsStatements() {
         Map<String, Play> plays = Map.of("hamlet", new Tragedy("Hamlet", "tragedy"),
                 "as-like", new Comedy("As You Like It", "comedy"),
-                "othello", new Tragedy("Othello", "tragedy"));
+                "othello", new History("Romeo & Julia", "history"));
 
         Invoice invoice = new Invoice("BigCo", List.of(new Performance("hamlet", 55),
                 new Performance("as-like", 35),
@@ -30,7 +31,7 @@ public class StatementPrinterTest {
         Assert.assertEquals("Statement print mismatch", "Statement for BigCo\n" +
                 "  Hamlet: $650.00 (55 seats)\n" +
                 "  As You Like It: $580.00 (35 seats)\n" +
-                "  Othello: $500.00 (40 seats)\n" +
+                "  Romeo & Julia: $500.00 (40 seats)\n" +
                 "Amount owed is $1,730.00\n" +
                 "You earned 47 credits\n", result);
     }

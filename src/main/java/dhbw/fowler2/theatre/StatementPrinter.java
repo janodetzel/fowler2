@@ -10,7 +10,6 @@ public class StatementPrinter {
 
     private Invoice invoice = null;
     private Map<String, Play> plays = null;
-    PerformanceCalculator performanceCalculator = new PerformanceCalculator();
 
     public String print(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
