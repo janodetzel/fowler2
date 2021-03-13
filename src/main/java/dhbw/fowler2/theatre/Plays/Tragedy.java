@@ -4,7 +4,6 @@ import dhbw.fowler2.theatre.Performance;
 
 public class Tragedy extends Play {
 
-    private int calculatedAmount = 40000;
 
     public Tragedy(String name, String type) {
         super(name, type);
@@ -12,6 +11,7 @@ public class Tragedy extends Play {
 
     @Override
     public int calculateAmount(Performance performance) {
+        int calculatedAmount = 40000;
         if (performance.audience > 30) {
             calculatedAmount += 1000 * (performance.audience - 30);
         };
